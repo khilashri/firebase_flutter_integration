@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "991655315703",
+    "project_id": "userform-c8cd5",
+    "storage_bucket": "userform-c8cd5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991655315703:android:efe1449b7e90da9a192bf2",
+        "android_client_info": {
+          "package_name": "com.example.userform"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "991655315703-jalg8moao03lebnkvvn2r8d1cfa5k9ga.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.userform",
+            "certificate_hash": "8694b40542ad3261c2ce27c415e143a969b1f9ee"
+          }
+        },
+        {
+          "client_id": "991655315703-0pa9ge0oeqhlk93h51c4nfs2mbd9ioak.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyr2Nh6ikrxi_SvCO0I_PMDiMwsUFmAGA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "991655315703-0pa9ge0oeqhlk93h51c4nfs2mbd9ioak.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
