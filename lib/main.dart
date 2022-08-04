@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
           print(snapshot);
           if (snapshot.connectionState == ConnectionState.done) {
             if (snapshot.data != null) {
-              return const EditProfile();
+              return EditProfile( );
             } else {
               return const loginPage(title: '');
             }

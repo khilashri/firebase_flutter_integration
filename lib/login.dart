@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:userform/api.dart';
 import 'package:userform/editprofile.dart';
@@ -20,15 +21,24 @@ class _loginPageState extends State<loginPage> {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    print(size.width);
+
     return Scaffold(
         appBar: AppBar(title: const Text('Login page')),
         body: Padding(
-          padding:  const EdgeInsets.all(8.0),
+          padding: EdgeInsets.symmetric(
+              horizontal: kIsWeb
+                  ? size.width < 600
+                      ? size.width * 0.04
+                      : size.width * 0.2
+                  : 0.02,
+              vertical: kIsWeb ? size.height * 0.2 : size.height * 0.02),
           child: Column(
             children: [
               TextField(
                   controller: _controller,
-                  decoration:  const InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: 'User name',
                     hintText: 'Email',
                   )),
@@ -37,7 +47,7 @@ class _loginPageState extends State<loginPage> {
                 decoration: InputDecoration(
                     suffixIcon: IconButton(
                       icon: Icon(
-                        _isObsecure? Icons.visibility : Icons.visibility_off,
+                        _isObsecure ? Icons.visibility : Icons.visibility_off,
                       ),
                       onPressed: () {
                         setState(() {

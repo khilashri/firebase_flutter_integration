@@ -178,6 +178,11 @@ class _EditProfileState extends State<EditProfile> {
                   dropdownvalue = newValue!;
                 });
               }),
+
+              ElevatedButton(onPressed: (() {
+                 Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const loginPage(title: '',)));
+              }), child: Text('Submit'))
         ],
       )),
     );
