@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
 import 'package:userform/api.dart';
@@ -22,7 +21,7 @@ class UserData extends StatefulWidget {
 class _UserDataState extends State<UserData> {
   final _formKey = GlobalKey<FormState>();
   TextEditingController dateInput = TextEditingController();
-  final TextEditingController _controller = TextEditingController();  
+  final TextEditingController _controller = TextEditingController();
   final TextEditingController _Email = TextEditingController();
   final TextEditingController _image = TextEditingController();
 
@@ -52,7 +51,7 @@ class _UserDataState extends State<UserData> {
       appBar: AppBar(title: const Text('User data')),
       body: SingleChildScrollView(
         child: Column(children: [
-          Text("sdfghjk",style: TextStyle(fontWeight: FontWeight.bold)),
+          const Text("sdfghjk", style: TextStyle(fontWeight: FontWeight.bold)),
           CircleAvatar(
               backgroundColor: Colors.black,
               radius: 100,
@@ -90,15 +89,13 @@ class _UserDataState extends State<UserData> {
           ),
           TextFormField(
             controller: _controller,
-              decoration:
+            decoration:
                 const InputDecoration(labelText: 'Name *', hintText: 'Name '),
             validator: (String? value) {
               return (value != null && value.contains('@'))
                   ? 'Do not use the @ char.'
                   : null;
             },
-            
-          
           ),
           TextField(
             controller: _Email,
@@ -161,9 +158,8 @@ class _UserDataState extends State<UserData> {
               print(widget.id);
 
               ApiService.uploadFile("images/", imageFile!).then((value) {
-                if(UserData==null){
-
-                }else{
+                if (UserData == null) {
+                } else {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
