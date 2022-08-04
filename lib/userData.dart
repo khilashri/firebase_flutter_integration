@@ -51,7 +51,7 @@ class _UserDataState extends State<UserData> {
       appBar: AppBar(title: const Text('User data')),
       body: SingleChildScrollView(
         child: Column(children: [
-          const Text("sdfghjk", style: TextStyle(fontWeight: FontWeight.bold)),
+          const Text("Test", style: TextStyle(fontWeight: FontWeight.bold)),
           CircleAvatar(
               backgroundColor: Colors.black,
               radius: 100,
